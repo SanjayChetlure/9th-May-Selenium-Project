@@ -6,24 +6,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Ex1_SelectOption2_From_MultiSelectableListbox
+
+public class Ex6_getSizeOfAllOptionFrom_Listbox
 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws InterruptedException {
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://testautomationpractice.blogspot.com/");
 
-
         WebElement colors = driver.findElement(By.xpath("//select[@id='colors']"));
-
         Select s=new Select(colors);
 
-        //3: call select class methods
-//        s.selectByVisibleText("Blue");
-        s.selectByValue("yellow");
-//        s.selectByIndex(0);
-//        s.selectByIndex(5);
+//        List<WebElement> allOptions = s.getOptions();
+//        System.out.println(allOptions.size());
+
+        System.out.println(s.getOptions().size());
 
     }
 }
