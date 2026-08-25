@@ -20,9 +20,8 @@ public class Ex2_CaptureScreenshotOf_SpecificElement
         File src = driver.findElement(By.xpath("//button[text()='START']")).getScreenshotAs(OutputType.FILE);
         System.out.println(src);
 
-        File dest=new File("D:\\Java\\Batches\\2026\\9th May 2026\\Screenshots\\abc.png");
+        File dest=new File("D:\\Java\\Batches\\2026\\9th May 2026\\Screenshots\\abc1.png");
 
         FileHandler.copy(src,dest);          //className.methodName(srcImageAddress,desImgAddress)
-
     }
 }
