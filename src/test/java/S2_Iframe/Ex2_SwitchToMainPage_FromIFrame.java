@@ -3,8 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.io.IOException;
-
-public class Ex1_SwitchToFrame
+public class Ex2_SwitchToMainPage_FromIFrame
 {
     public static void main(String[] args) throws IOException {
 
@@ -13,11 +12,16 @@ public class Ex1_SwitchToFrame
         driver.get("https://www.w3schools.com/js/tryit.asp?filename=tryjs_myfirst");
 
         //Switch to frame
-//        driver.switchTo().frame("iframeResult");        //frameIdOrName
-        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='iframeResult']")));   // frame WebElement
-//        driver.switchTo().frame(0)         frame Index
+        driver.switchTo().frame("iframeResult");        //frameIdOrName
 
-        //click on date & time button
+        //click on date & time button from iframe
         driver.findElement(By.xpath("//button[contains(text(),'Date and Time')]")).click();
+
+        //switch to main Page from iframe
+//        driver.switchTo().parentFrame();
+        driver.switchTo().defaultContent();
+
+        //click on open menu option from main page
+        driver.findElement(By.xpath("//a[@id='menuButton']")).click();
     }
 }
