@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class Ex3_mouse_leftClickAction
+public class Ex4_mouse_leftClickAction
 {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver=new ChromeDriver();
